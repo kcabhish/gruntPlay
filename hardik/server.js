@@ -10,7 +10,5 @@ app.get('/', function (req, res) {
 
 //Launching server
 app.listen(8080, function (req,res) {
-  console.log("Opening port 8080");    
-  console.log('application launched at localhost:8080');
 });
 
