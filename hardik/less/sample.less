@@ -91,3 +91,43 @@ body{
     padding: 10px;
     margin-left:380px;
 }
+
+
+@overlayHeight:200px;
+@overlayTop:80px;
+@animationTime:5s;
+@delayTime:3s;
+
+
+.overlay {
+    
+    height: @overlayHeight;
+    width: 500px;
+    position: fixed;
+    z-index: 5;
+    top: @overlayTop;
+    left: 1000px;
+
+    background-color: white;
+    overflow-y: hidden;
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: @animationTime; 
+    animation-name: example;
+    animation-duration: @animationTime;
+    
+    -webkit-animation-delay: @delayTime; 
+    animation-delay: @delayTime;
+    
+}
+
+@-webkit-keyframes example {
+    75%  { left:@overlayHeight; top:@overlayTop;}
+    100%   { left:@overlayHeight; top:@overlayTop;}
+
+}
+
+
+@keyframes example {
+    75%  {left:@overlayHeight; top:@overlayTop;}
+    100%   { left:@overlayHeight; top:@overlayTop;}
+}
